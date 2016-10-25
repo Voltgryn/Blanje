@@ -1,0 +1,106 @@
+@mixin flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin inline-flex {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url(../fonts/RobotoCondensed-Light.ttf);
+}
+
+$primaryFont: "Roboto Condensed";
+$borderColor: rgba(255, 255, 255, 0.3);
+
+body { 
+  background: url("../images/blanje01.jpg") no-repeat center fixed; 
+  background-size: cover;
+}
+
+.wrapper-top {
+  position: absolute;
+  width: 100%;
+  top: 340px;
+
+  #header {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+  
+    h1 {
+      font-family: $primaryFont;
+      font-size: 42px;
+      margin: 0;
+      line-height: 120px;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+  
+  #navbar {
+    position: relative;
+    margin: auto;
+    width: 45%;
+    height: 60px;
+    background-color: rgba(23, 23, 23, 0.6);
+    border-radius: 0 0 5px 5px;
+
+    ul {
+      @include flexbox;
+      font-family: $primaryFont;
+      font-size: 18px;
+      color: white;
+      text-transform: uppercase;
+      list-style: none;
+      line-height: 60px;
+      justify-content: space-around;
+      padding: 0;
+
+      .fa {
+        color: $borderColor;
+        padding-right: 10px;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      a:after {
+        position: relative;
+        content: '';
+        display: block;
+        height: 1px;
+        width: 0;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+        top: -15px;
+      }
+
+      a:hover:after{
+        width: 100%;
+        background: white;
+      }
+    }
+  }
+
+  .highlight {
+    border-bottom: 1px solid;
+    padding-bottom: 2px;
+  }
+}
