@@ -5,8 +5,7 @@
 	<title>Blanje</title>
 	<meta charset="UTF-8" name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="fonts/font-awesome-4.6.3/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/bootstrap-social.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="css/jquery-ui.min.css">
 	<link rel="stylesheet" href="css/blanje.css">
 </head>
@@ -19,24 +18,53 @@
 		</div>
 		<div id="navbar">
 			<ul id="menu">
-				<li><span class="fa fa-home"></span><a href="#" id="početna">Početna</a></li>
-				<li><span class="fa fa-user"></span><a href="#" id="o-nama">O nama</a></li>
-				<li><span class="fa fa-newspaper-o"></span><a href="#" id="događanja">Događanja</a></li>
-				<li><span class="fa fa-image"></span><a href="#" id="galerija">Galerija</a></li>
-				<li><span class="fa fa-phone"></span><a href="#" id="kontakt">Kontakt</a></li>
+				<li><i class="material-icons">home</i><a href="#" id="početna">Početna</a></li>
+				<li><i class="material-icons">people</i><a href="#" id="o-nama">O nama</a></li>
+				<li><i class="material-icons">public</i><a href="#" id="događanja">Događanja</a></li>
+				<li><i class="material-icons">photo</i><a href="#" id="galerija">Galerija</a></li>
+				<li><i class="material-icons">phone</i><a href="#" id="kontakt">Kontakt</a></li>
 			</ul>
 		</div>
 	</div>
 
 	<div id="wrapper-mid">
 		<div id="image-slider">
-			<a href="#" onclick="prev(); return false;"><span class="fa fa-chevron-left" id="prev"></span></a>
-			<a href="#" onclick="next(); return false;"><span class="fa fa-chevron-right" id="next"></span></a>
+			<a href="#" onclick="prev(); return false;"><i class="material-icons" id="prev">chevron_left</i></a>
+			<a href="#" onclick="next(); return false;"><i class="material-icons" id="next">chevron_right</i></a>
 			<img id="1" src="images/blanje01.jpg">
 			<img id="2" src="images/blanje02.jpg">
 			<img id="3" src="images/blanje03.jpg">
 			<img id="4" src="images/blanje04.jpg">
 			<img id="5" src="images/blanje05.jpg">
+		</div>
+		<div id="info">
+			<div class="wrapper-info">
+				<div class="icons">
+					<i class="material-icons">verified_user</i>
+				</div>
+				<div class="hours">
+					<h2>Placeholder</h2>
+					<p>#1</p>
+				</div>
+			</div>
+			<div class="wrapper-info">
+				<div class="icons">
+					<i class="material-icons">visibility</i>
+				</div>
+				<div class="hours">
+					<h2>Placeholder</h2>
+					<p>#2</p>
+				</div>
+			</div>
+			<div class="wrapper-info">
+				<div class="icons">
+					<i class="material-icons">airplay</i>
+				</div>
+				<div class="hours">
+					<h2>Placeholder</h2>
+					<p>#3</p>
+				</div>
+			</div>
 		</div>
 	</div>
 

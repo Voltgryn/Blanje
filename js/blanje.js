@@ -43,15 +43,15 @@ function stopSlider() {
 function prev() {
   //$("#image-slider").stop(true, true);
   stopSlider();
-  id = currentSlide;
+  newSlide = currentSlide;
 
-  if (id == 1) {
+  if (newSlide == 1) {
     currentSlide = count;
   } else {
-    currentSlide = id - 1;
+    currentSlide = newSlide - 1;
   }
 
-  $("#image-slider > img#" + id).hide('slide', { direction: "right" }, 600);
+  $("#image-slider > img#" + newSlide).hide('slide', { direction: "right" }, 600);
   $("#image-slider > img#" + currentSlide).show('slide', { direction: "left" }, 600);
 
   nextSlide = currentSlide + 1;
@@ -61,15 +61,15 @@ function prev() {
 function next() {
   //$("#image-slider > img").stop(true, true);
   stopSlider();
-  id = currentSlide;
+  newSlide = currentSlide;
 
-  if (id == count) {
+  if (newSlide == count) {
     currentSlide = 1;
   } else {
-    currentSlide = id + 1;
+    currentSlide = newSlide + 1;
   }
 
-  $("#image-slider > img#" + id).hide('slide', { direction: "left" }, 600);
+  $("#image-slider > img#" + newSlide).hide('slide', { direction: "left" }, 600);
   $("#image-slider > img#" + currentSlide).show('slide', { direction: "right" }, 600);
 
   nextSlide = currentSlide + 1;
