@@ -3,6 +3,9 @@ $(document).ready(function () {
   $("#image-slider > img#1").show();
   startSlider();
 
+  $("#prev").on("click", prev);
+  $("#next").on("click", next);
+
 });
 
 currentSlide = 1;
@@ -12,7 +15,7 @@ function startSlider() {
   count = $("#image-slider > img").length;
 
   loop = setInterval(function () {
-    $("#image-slider").stop(true, true);
+    $("#image-slider").stop(true, true); // stops chrome from catching up when tab is out of focus
     if (nextSlide > count) {
       nextSlide = 1;
       currentSlide = count;
@@ -41,7 +44,7 @@ function stopSlider() {
 }
 
 function prev() {
-  //$("#image-slider").stop(true, true);
+  $("#prev").off();
   stopSlider();
   newSlide = currentSlide;
 
@@ -52,14 +55,16 @@ function prev() {
   }
 
   $("#image-slider > img#" + newSlide).hide('slide', { direction: "right" }, 600);
-  $("#image-slider > img#" + currentSlide).show('slide', { direction: "left" }, 600);
+  $("#image-slider > img#" + currentSlide).show('slide', { direction: "left" }, 600, function () {
+    $("#prev").on("click", prev);
+  });
 
   nextSlide = currentSlide + 1;
   startSlider();
 }
 
 function next() {
-  //$("#image-slider > img").stop(true, true);
+  $("#next").off();
   stopSlider();
   newSlide = currentSlide;
 
@@ -70,7 +75,9 @@ function next() {
   }
 
   $("#image-slider > img#" + newSlide).hide('slide', { direction: "left" }, 600);
-  $("#image-slider > img#" + currentSlide).show('slide', { direction: "right" }, 600);
+  $("#image-slider > img#" + currentSlide).show('slide', { direction: "right" }, 600, function () {
+    $("#next").on("click", next);
+  });
 
   nextSlide = currentSlide + 1;
   startSlider();

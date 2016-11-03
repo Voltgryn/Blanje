@@ -19,13 +19,34 @@
   src: url(../fonts/RobotoCondensed-Light.ttf);
 }
 
-$primaryFont: "Roboto Condensed";
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/PT_Sans-Web-Regular.ttf);
+}
+
+$primaryColor: #ebebeb;
+$secondaryColor: #ffffff;
+$textColor: #555555;
 $borderColor: rgba(255, 255, 255, 0.3);
+$primaryFont: "Roboto Condensed";
+$secondaryFont: "PT Sans";
 
 body { 
-  background: url("../images/background.jpg") no-repeat center fixed; 
+  background: url("../images/background.png") no-repeat center fixed; 
   background-size: cover;
   font-family: $primaryFont;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1em;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7em;
 }
 
 #wrapper-top {
@@ -163,8 +184,8 @@ body {
   #info {
     width: 100%;
     height: 160px;
-    color: #656565;
-    background-color: #ebebeb;
+    color: $textColor;
+    background-color: $primaryColor;
     @include flexbox;
     justify-content: space-around;
     
@@ -190,10 +211,45 @@ body {
       flex-direction: column;
       justify-content: center;    
     }
+
     h2 {
       margin: 0;
     }
+
+    p {
+      font-family: $secondaryFont;
+    }
   }
+
+  #welcome {
+    width: 100%;
+    height: 250px;
+    background-color: $secondaryColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #welcome-message {
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      margin-top: 0; 
+      margin-bottom: 10px;
+      text-align: center;
+      color: $textColor;
+    }
+
+    p {
+      margin-top: 0; 
+      margin-bottom: 16px;
+      text-align: center;
+      font-family: $secondaryFont;
+      color: #656565;
+    }
+  }
+
 }
 
 
