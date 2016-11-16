@@ -21,23 +21,13 @@ function startSlider() {
       currentSlide = count;
     }
 
-    $("#image-slider > img#" + currentSlide).hide('slide', { direction: "left" }, 600);
-    $("#image-slider > img#" + nextSlide).show('slide', { direction: "right" }, 600);
+    $("#image-slider > img#" + currentSlide).hide("slide", { direction: "left" }, 600);
+    $("#image-slider > img#" + nextSlide).show("slide", { direction: "right" }, 600);
 
     currentSlide = nextSlide;
     nextSlide = nextSlide + 1;
   }, 4000)
 }
-
-/*function prev() {
-  newSlide = currentSlide - 1;
-  showSlide(newSlide);
-}
- 
-function next() {
-  newSlide = currentSlide + 1;
-  showSlide(newSlide);
-}*/
 
 function stopSlider() {
   window.clearInterval(loop);
@@ -54,8 +44,8 @@ function prev() {
     currentSlide = newSlide - 1;
   }
 
-  $("#image-slider > img#" + newSlide).hide('slide', { direction: "right" }, 600);
-  $("#image-slider > img#" + currentSlide).show('slide', { direction: "left" }, 600, function () {
+  $("#image-slider > img#" + newSlide).hide("slide", { direction: "right" }, 600);
+  $("#image-slider > img#" + currentSlide).show("slide", { direction: "left" }, 600, function () {
     $("#prev").on("click", prev);
   });
 
@@ -74,8 +64,8 @@ function next() {
     currentSlide = newSlide + 1;
   }
 
-  $("#image-slider > img#" + newSlide).hide('slide', { direction: "left" }, 600);
-  $("#image-slider > img#" + currentSlide).show('slide', { direction: "right" }, 600, function () {
+  $("#image-slider > img#" + newSlide).hide("slide", { direction: "left" }, 600);
+  $("#image-slider > img#" + currentSlide).show("slide", { direction: "right" }, 600, function () {
     $("#next").on("click", next);
   });
 
