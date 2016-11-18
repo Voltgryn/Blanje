@@ -15,17 +15,17 @@
 	<div id="pre-header">
 	</div>
 
-	<div id="wrapper-top">
+	<div class="wrapper-top">
 		<div id="header">
 			<h1>Blanje</h1>
 		</div>
 		<div id="navbar">
 			<ul id="menu">
-				<li><i class="material-icons">home</i><a href="#" id="početna">Početna</a></li>
-				<li><i class="material-icons">people</i><a href="#" id="o-nama">O nama</a></li>
-				<li><i class="material-icons">public</i><a href="#" id="događanja">Događanja</a></li>
-				<li><i class="material-icons">photo</i><a href="#" id="galerija">Galerija</a></li>
-				<li><i class="material-icons">phone</i><a href="#" id="kontakt">Kontakt</a></li>
+				<li><i class="material-icons">home</i><a href="#pocetna" id="go-pocetna">Početna</a></li>
+				<li><i class="material-icons">people</i><a href="#o-nama" id="go-o-nama">O nama</a></li>
+				<li><i class="material-icons">public</i><a href="#dogadanja" id="go-dogadanja">Događanja</a></li>
+				<li><i class="material-icons">photo</i><a href="#galerija" id="go-galerija">Galerija</a></li>
+				<li><i class="material-icons">phone</i><a href="#kontakt" id="go-kontakt">Kontakt</a></li>
 			</ul>
 		</div>
 	</div>
@@ -33,7 +33,7 @@
 	<div id="post-header">
 	</div>
 
-	<div id="wrapper-mid">
+	<div class="wrapper-mid" id="pocetna">
 		<div id="image-slider">
 			<a href="#" onclick="return false;"><i class="material-icons" id="prev">chevron_left</i></a>
 			<a href="#" onclick="return false;"><i class="material-icons" id="next">chevron_right</i></a>
@@ -71,8 +71,8 @@
 			</div>
 		</div>
 		<div id="welcome">
+			<h2>Dobrodošli u Blanje</h2>
 			<div id="welcome-message">
-				<h2>Dobrodošli u Blanje</h2>
 				<p>Spoj netaknute prirode i seoske idile. Ukoliko ste zasićeni gradskim životom, dođite u prirodu i opustite se na Izletištu
 					Blanje gdje će vas dočekati ljubazni vlasnici, ugodna i prijateljska atmosfera te prekrasna priroda.</p>
 				<p>Dvorište popločeno pečenom opekom, duga, prostrana i skladna slavonska kuća sa trijemom, autohtoni stoljetni namještaj,
@@ -83,9 +83,61 @@
 		</div>
 	</div>
 
-	<div id="wrapper-bot">
-		<div id="wrapper-bot-left">
-			<div id="container-left">
+	<div class="wrapper-mid" id="o-nama">
+		<div id="o-nama-top">
+			<div id="opcenito">
+				<h2>Općenito</h2>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa posuere lacus
+					convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus lobortis. Lorem Ipsum is simply
+					dummy text of Lorem the printing and typesettings. Aliquam dictum nulla eu varius porta. Maecenas congue dui id posuere
+					fermentum. Sed fringilla sem sed massa ullamcorper, vitae rutrum justo sodales. Cras sed iaculis enim. Sed aliquet viverra
+					nisl a tristique. Curabitur vitae mauris sem. Pellentesque iaculis nibh leo, mattis aliquet arcu tincidunt at.</p>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa posuere lacus
+					convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus lobortis. Lorem Ipsum is simply
+					dummy text of Lorem the printing and typesettings. Aliquam dictum nulla eu varius porta. Maecenas congue dui id posuere
+					fermentum. Sed fringilla sem sed massa ullamcorper, vitae rutrum justo sodales. Cras sed iaculis enim. Sed aliquet viverra
+					nisl a tristique. Curabitur vitae mauris sem. Pellentesque iaculis nibh leo, mattis aliquet arcu tincidunt at.</p>
+			</div>
+		</div>
+		<div id="o-nama-bot">
+			<div id="tko-smo">
+				<h2>Tko smo</h2>
+				<div id="container-ljudi">
+					<div class="ljudi">
+						<div class="picture">
+							<img src="images/people-placeholder01.jpg">
+						</div>
+						<div class="ljudi-info">
+							<h3>Ivan Pernar</h3>
+							<p>Vlasnik</p>
+						</div>
+					</div>
+					<div class="ljudi">
+						<div class="picture">
+							<img src="images/people-placeholder01.jpg">
+						</div>
+						<div class="ljudi-info">
+							<h3>Dino Mataija</h3>
+							<p>CEO</p>
+						</div>
+					</div>
+					<div class="ljudi">
+						<div class="picture">
+							<img src="images/people-placeholder02.jpg">
+						</div>
+						<div class="ljudi-info">
+							<h3>Boris Muminović</h3>
+							<p>Project Manager</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="wrapper-bot">
+		<div id="container-bot">
+			<div id="container-bot-left">
 				<h3>Kontakt informacije</h3>
 				<ul id="kontakt-info">
 					<li><i class="material-icons">phone</i>Telefon: 098/908-2099</li>
@@ -93,9 +145,7 @@
 					<li><i class="material-icons">web</i>Web-stranica:&nbsp<a href="https://voltgryn.github.io/blanje/">https://voltgryn.github.io/blanje</a></li>
 				</ul>
 			</div>
-		</div>
-		<div id="wrapper-bot-right">
-			<div id="container-right">
+			<div id="container-bot-right">
 				<h3>Adresa</h3>
 				<p>Glavna 20, Blanje,<br>Osječko-Baranjska,<br>Croatia</p>
 			</div>
