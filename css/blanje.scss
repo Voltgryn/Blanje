@@ -411,6 +411,7 @@ p {
           font-size: 16px;
           font-weight: 300;
           color: rgba(255, 255, 255, 0.5);
+          line-height: 22px;
 
           i {
             font-size: 16px;
@@ -432,9 +433,10 @@ p {
     }
 
     #container-bot-right {
+      height: 130px;
       h3 {
         margin-top: 20px;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         font-family: $primaryFont;
         font-size: 22px;
         font-weight: 300;
@@ -443,14 +445,20 @@ p {
         line-height: 1.1;
       }
 
-      p {
-        margin: 0 auto;
+      #adresa-info {
+        margin-top: 0;
         margin-bottom: 10px;
-        font-family: $secondaryFont;
-        font-size: 16px;
-        font-weight: 300;
-        color: rgba(255, 255, 255, 0.5);
-        line-height: 23px;
+        list-style: none;
+        padding: 0;
+
+        li {
+          @include flexbox;
+          font-family: $secondaryFont;
+          font-size: 16px;
+          font-weight: 300;
+          color: rgba(255, 255, 255, 0.5);
+          line-height: 22px;
+        }
       }
     }
   }

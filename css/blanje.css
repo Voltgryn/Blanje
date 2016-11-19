@@ -333,7 +333,8 @@ p {
         font-family: "PT Sans";
         font-size: 16px;
         font-weight: 300;
-        color: rgba(255, 255, 255, 0.5); }
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 22px; }
         .wrapper-bot #container-bot #container-bot-left #kontakt-info li i {
           font-size: 16px;
           color: rgba(255, 255, 255, 0.2);
@@ -344,22 +345,32 @@ p {
           text-decoration: none; }
         .wrapper-bot #container-bot #container-bot-left #kontakt-info li a:hover {
           color: #5b7a74; }
-    .wrapper-bot #container-bot #container-bot-right h3 {
-      margin-top: 20px;
-      margin-bottom: 8px;
-      font-family: "Roboto Condensed";
-      font-size: 22px;
-      font-weight: 300;
-      color: #FFFFFF;
-      opacity: 0.8;
-      line-height: 1.1; }
-    .wrapper-bot #container-bot #container-bot-right p {
-      margin: 0 auto;
-      margin-bottom: 10px;
-      font-family: "PT Sans";
-      font-size: 16px;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.5);
-      line-height: 23px; }
+    .wrapper-bot #container-bot #container-bot-right {
+      height: 130px; }
+      .wrapper-bot #container-bot #container-bot-right h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family: "Roboto Condensed";
+        font-size: 22px;
+        font-weight: 300;
+        color: #FFFFFF;
+        opacity: 0.8;
+        line-height: 1.1; }
+      .wrapper-bot #container-bot #container-bot-right #adresa-info {
+        margin-top: 0;
+        margin-bottom: 10px;
+        list-style: none;
+        padding: 0; }
+        .wrapper-bot #container-bot #container-bot-right #adresa-info li {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          font-family: "PT Sans";
+          font-size: 16px;
+          font-weight: 300;
+          color: rgba(255, 255, 255, 0.5);
+          line-height: 22px; }
 
 /*# sourceMappingURL=blanje.css.map */
