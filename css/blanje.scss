@@ -14,6 +14,12 @@
 	display: inline-flex;
 }
 
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
 @font-face {
   font-family: "Roboto Condensed";
   src: url(../fonts/RobotoCondensed-Light.ttf);
@@ -31,10 +37,16 @@ $borderColor: rgba(255, 255, 255, 0.3);
 $primaryFont: "Roboto Condensed";
 $secondaryFont: "PT Sans";
 
+* {
+  @include border-box;
+}
+
 body { 
   background: url("../images/background.png") no-repeat center fixed; 
   background-size: cover;
   font-family: $primaryFont;
+  font-size: 14px; 
+  margin: 0;
 }
 
 h2 {
@@ -44,6 +56,8 @@ h2 {
 }
 
 p {
+  margin: 0;
+  margin-bottom: 10px;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.7em;
@@ -70,6 +84,7 @@ p {
       font-size: 42px;
       margin: 0;
       line-height: 120px;
+      font-weight: 100;
       color: white;
       text-transform: uppercase;
     }
@@ -91,6 +106,7 @@ p {
       line-height: 60px;
       justify-content: space-around;
       padding: 0;
+      margin: 0;
 
       li {
         @include flexbox;
@@ -136,8 +152,6 @@ p {
 .wrapper-mid {
   margin: auto;
   width: 59%;
-  //height: 860px;
-  //background-color: rgba(255, 255, 255, 0.3);
   background-color: #FFFFFF;
   border-top: 7px solid;
   border-bottom: 7px solid;
@@ -335,8 +349,10 @@ p {
               margin: 0 auto;
               font-family: $primaryFont;
               font-size: 22px;
+              font-weight: 100;
               color: #FFFFFF;
               text-align: center;
+              line-height: 1.1;
             }
 
             p {
@@ -373,14 +389,19 @@ p {
 
     #container-bot-left {
       h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
         font-family: $primaryFont;
         font-size: 22px;
         font-weight: 300;
         color: #FFFFFF;
         opacity: 0.8;
+        line-height: 1.1;
       }
 
       #kontakt-info {
+        margin-top: 0;
+        margin-bottom: 10px;
         list-style: none;
         padding: 0;
 
@@ -412,14 +433,19 @@ p {
 
     #container-bot-right {
       h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
         font-family: $primaryFont;
         font-size: 22px;
         font-weight: 300;
         color: #FFFFFF;
         opacity: 0.8;
+        line-height: 1.1;
       }
 
       p {
+        margin: 0 auto;
+        margin-bottom: 10px;
         font-family: $secondaryFont;
         font-size: 16px;
         font-weight: 300;

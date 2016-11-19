@@ -4,10 +4,17 @@
 @font-face {
   font-family: "PT Sans";
   src: url(../fonts/PT_Sans-Web-Regular.ttf); }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   background: url("../images/background.png") no-repeat center fixed;
   background-size: cover;
-  font-family: "Roboto Condensed"; }
+  font-family: "Roboto Condensed";
+  font-size: 14px;
+  margin: 0; }
 
 h2 {
   font-size: 32px;
@@ -15,6 +22,8 @@ h2 {
   line-height: 1em; }
 
 p {
+  margin: 0;
+  margin-bottom: 10px;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.7em; }
@@ -37,6 +46,7 @@ p {
       font-size: 42px;
       margin: 0;
       line-height: 120px;
+      font-weight: 100;
       color: white;
       text-transform: uppercase; }
   .wrapper-top #navbar {
@@ -57,7 +67,8 @@ p {
       list-style: none;
       line-height: 60px;
       justify-content: space-around;
-      padding: 0; }
+      padding: 0;
+      margin: 0; }
       .wrapper-top #navbar #menu li {
         display: -webkit-box;
         display: -webkit-flex;
@@ -268,8 +279,10 @@ p {
           margin: 0 auto;
           font-family: "Roboto Condensed";
           font-size: 22px;
+          font-weight: 100;
           color: #FFFFFF;
-          text-align: center; }
+          text-align: center;
+          line-height: 1.1; }
         #o-nama #o-nama-bot #tko-smo #container-ljudi .ljudi .ljudi-info p {
           margin: 0 auto;
           font-family: "PT Sans";
@@ -298,12 +311,17 @@ p {
     align-items: center;
     flex-wrap: wrap; }
     .wrapper-bot #container-bot #container-bot-left h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
       font-family: "Roboto Condensed";
       font-size: 22px;
       font-weight: 300;
       color: #FFFFFF;
-      opacity: 0.8; }
+      opacity: 0.8;
+      line-height: 1.1; }
     .wrapper-bot #container-bot #container-bot-left #kontakt-info {
+      margin-top: 0;
+      margin-bottom: 10px;
       list-style: none;
       padding: 0; }
       .wrapper-bot #container-bot #container-bot-left #kontakt-info li {
@@ -327,12 +345,17 @@ p {
         .wrapper-bot #container-bot #container-bot-left #kontakt-info li a:hover {
           color: #5b7a74; }
     .wrapper-bot #container-bot #container-bot-right h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
       font-family: "Roboto Condensed";
       font-size: 22px;
       font-weight: 300;
       color: #FFFFFF;
-      opacity: 0.8; }
+      opacity: 0.8;
+      line-height: 1.1; }
     .wrapper-bot #container-bot #container-bot-right p {
+      margin: 0 auto;
+      margin-bottom: 10px;
       font-family: "PT Sans";
       font-size: 16px;
       font-weight: 300;
