@@ -346,7 +346,7 @@ p {
           color: #5b7a74; }
     .wrapper-bot #container-bot #container-bot-right h3 {
       margin-top: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       font-family: "Roboto Condensed";
       font-size: 22px;
       font-weight: 300;
@@ -360,6 +360,6 @@ p {
       font-size: 16px;
       font-weight: 300;
       color: rgba(255, 255, 255, 0.5);
-      line-height: 22px; }
+      line-height: 23px; }
 
 /*# sourceMappingURL=blanje.css.map */
