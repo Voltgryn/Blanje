@@ -3,35 +3,44 @@ $(document).ready(function () {
   startSlider();
 });
 
+sliderStarted = false;
+currentSlide = 1;
+nextSlide = 2;
+
 $("#prev").on("click", prev);
 $("#next").on("click", next);
 
 // stops image slider animations to queue up when you switch tabs
-$(window).on("focus", startSlider);
+$(window).on("focus", function () {
+  if (sliderStarted == false) {
+    startSlider();
+  }
+});
 $(window).on("blur", stopSlider);
 
-currentSlide = 1;
-nextSlide = 2;
-
 function startSlider() {
-  count = $("#image-slider > img").length;
+  if (sliderStarted == false) {
+    count = $("#image-slider > img").length;
 
-  loop = setInterval(function () {
-    if (nextSlide > count) {
-      nextSlide = 1;
-      currentSlide = count;
-    }
+    loop = setInterval(function () {
+      if (nextSlide > count) {
+        nextSlide = 1;
+        currentSlide = count;
+      }
 
-    $("#image-slider > img#" + currentSlide).hide("slide", { direction: "left" }, 600);
-    $("#image-slider > img#" + nextSlide).show("slide", { direction: "right" }, 600);
+      $("#image-slider > img#" + currentSlide).hide("slide", { direction: "left" }, 600);
+      $("#image-slider > img#" + nextSlide).show("slide", { direction: "right" }, 600);
 
-    currentSlide = nextSlide;
-    nextSlide = nextSlide + 1;
-  }, 4000)
+      currentSlide = nextSlide;
+      nextSlide = nextSlide + 1;
+    }, 4000)
+    sliderStarted = true;
+  }
 }
 
 function stopSlider() {
   window.clearInterval(loop);
+  sliderStarted = false;
 }
 
 function prev() {
@@ -83,7 +92,7 @@ $("#image-slider > img").hover(
   }
 );
 
-var offset = $("#wrapper-header").offset();
+offset = $("#wrapper-header").offset();
 
 $(window).scroll(function () {
   if ($(this).scrollTop() > offset.top) {

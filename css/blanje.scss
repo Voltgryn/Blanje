@@ -388,7 +388,7 @@ p {
     margin-top: 30px;
     padding-left: 5%;
     padding-right: 5%;
-    padding-bottom: 14px;
+    padding-bottom: 18px;
     border-bottom: 1px solid rgba(23, 23, 23, 0.1);
 
     .container-image {
@@ -418,16 +418,6 @@ p {
         color: $headerColor;
       }
 
-      p {
-        margin-top: 0; 
-        margin-bottom: 16px;
-        text-align: left;
-        font-family: $secondaryFont;
-        color: $textColor;
-      }
-    }
-
-    .long-text {
       p {
         margin-top: 0; 
         margin-bottom: 16px;
