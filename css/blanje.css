@@ -34,14 +34,15 @@ p {
 
 .wrapper-top {
   width: 100%;
-  top: 340px; }
+  z-index: 10; }
   .wrapper-top #header {
     width: 100%;
     height: 120px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.5s ease; }
     .wrapper-top #header h1 {
       font-size: 42px;
       margin: 0;
@@ -54,7 +55,8 @@ p {
     width: 45%;
     height: 60px;
     background-color: rgba(23, 23, 23, 0.3);
-    border-radius: 0 0 5px 5px; }
+    border-radius: 0 0 5px 5px;
+    transition: all 0.5s ease; }
     .wrapper-top #navbar #menu {
       display: -webkit-box;
       display: -webkit-flex;
@@ -296,7 +298,7 @@ p {
   margin: auto;
   margin-top: 60px;
   margin-bottom: 60px;
-  background-color: #000000;
+  background-color: #282828;
   border-radius: 5px; }
   .wrapper-bot #container-bot {
     width: 80%;

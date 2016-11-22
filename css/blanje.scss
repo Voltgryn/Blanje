@@ -70,7 +70,7 @@ p {
 
 .wrapper-top {
   width: 100%;
-  top: 340px;
+  z-index: 10;
 
   #header {
     width: 100%;
@@ -79,6 +79,7 @@ p {
     background-color: rgba(0, 0, 0, 0.7);
     border-top: 1px solid $borderColor;
     border-bottom: 1px solid $borderColor;
+    transition: all 0.5s ease;
   
     h1 {
       font-size: 42px;
@@ -96,6 +97,7 @@ p {
     height: 60px;
     background-color: rgba(23, 23, 23, 0.3);
     border-radius: 0 0 5px 5px;
+    transition: all 0.5s ease;
 
     #menu {
       @include flexbox;
@@ -375,7 +377,7 @@ p {
   margin: auto;
   margin-top: 60px;
   margin-bottom: 60px;
-  background-color: #000000;
+  background-color: rgba(40, 40, 40, 1);
   border-radius: 5px;
 
   #container-bot {

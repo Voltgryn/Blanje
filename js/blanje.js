@@ -1,12 +1,14 @@
 $(document).ready(function () {
-
   $("#image-slider > img#1").show();
   startSlider();
-
-  $("#prev").on("click", prev);
-  $("#next").on("click", next);
-
 });
+
+$("#prev").on("click", prev);
+$("#next").on("click", next);
+
+// stops image slider animations to queue up when you switch tabs
+$(window).on("focus", startSlider);
+$(window).on("blur", stopSlider);
 
 currentSlide = 1;
 nextSlide = 2;
@@ -15,7 +17,6 @@ function startSlider() {
   count = $("#image-slider > img").length;
 
   loop = setInterval(function () {
-    $("#image-slider").stop(true, true); // stops chrome from catching up when tab is out of focus
     if (nextSlide > count) {
       nextSlide = 1;
       currentSlide = count;
@@ -81,3 +82,52 @@ $("#image-slider > img").hover(
     startSlider();
   }
 );
+
+var offset = $("#wrapper-header").offset();
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() > offset.top) {
+    $("#pre-header").hide();
+    $("#wrapper-header").css("position", "fixed");
+    $("#header").css("background-color", "rgba(40, 40, 40, 1)");
+    $("#navbar").css("background-color", "rgba(80, 80, 80, 1)");
+    $("#post-header").css("height", "860px");
+  } else {
+    $("#pre-header").show();
+    $("#wrapper-header").css("position", "static");
+    $("#header").css("background-color", "rgba(0, 0, 0, 0.7)");
+    $("#navbar").css("background-color", "rgba(23, 23, 23, 0.3)");
+    $("#post-header").css("height", "340px");
+  }
+});
+
+$("#go-pocetna").click(function (e) {
+  e.preventDefault();
+  var pocetna = $("#pocetna").offset();
+  $("html, body").animate({ scrollTop: pocetna.top - 180 }, 300);
+  return false;
+});
+$("#go-o-nama").click(function (e) {
+  e.preventDefault();
+  var oNama = $("#o-nama").offset();
+  $("html, body").animate({ scrollTop: oNama.top - 180 }, 300);
+  return false;
+});
+$("#go-dogadanja").click(function (e) {
+  e.preventDefault();
+  var dogadanja = $("#dogadanja").offset();
+  $("html, body").animate({ scrollTop: dogadanja.top - 180 }, 300);
+  return false;
+});
+$("#go-galerija").click(function (e) {
+  e.preventDefault();
+  var galerija = $("#galerija").offset();
+  $("html, body").animate({ scrollTop: galerija.top - 180 }, 300);
+  return false;
+});
+$("#go-kontakt").click(function (e) {
+  e.preventDefault();
+  var kontakt = $("#kontakt").offset();
+  $("html, body").animate({ scrollTop: kontakt.top - 180 }, 300);
+  return false;
+});
