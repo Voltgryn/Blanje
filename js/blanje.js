@@ -113,10 +113,10 @@ $("#go-o-nama").click(function (e) {
   $("html, body").animate({ scrollTop: oNama.top - 180 }, 300);
   return false;
 });
-$("#go-dogadanja").click(function (e) {
+$("#go-vijesti").click(function (e) {
   e.preventDefault();
-  var dogadanja = $("#dogadanja").offset();
-  $("html, body").animate({ scrollTop: dogadanja.top - 180 }, 300);
+  var vijesti = $("#vijesti").offset();
+  $("html, body").animate({ scrollTop: vijesti.top - 180 }, 300);
   return false;
 });
 $("#go-galerija").click(function (e) {

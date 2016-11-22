@@ -52,7 +52,7 @@ p {
       text-transform: uppercase; }
   .wrapper-top #navbar {
     margin: auto;
-    width: 45%;
+    width: 60%;
     height: 60px;
     background-color: rgba(23, 23, 23, 0.3);
     border-radius: 0 0 5px 5px;
@@ -105,7 +105,7 @@ p {
 
 .wrapper-mid {
   margin: auto;
-  width: 59%;
+  width: 60%;
   background-color: #FFFFFF;
   border-top: 7px solid;
   border-bottom: 7px solid;
@@ -292,8 +292,63 @@ p {
           text-align: center;
           text-transform: uppercase; }
 
+#vijesti h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #555555; }
+#vijesti .container-vijesti {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.1); }
+  #vijesti .container-vijesti .container-image {
+    width: 40%;
+    min-width: 200px;
+    max-width: 400px; }
+    #vijesti .container-vijesti .container-image img {
+      width: 100%;
+      max-height: 300px; }
+  #vijesti .container-vijesti .short-text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 55%; }
+    #vijesti .container-vijesti .short-text h3 {
+      margin: 0 auto;
+      margin-bottom: 10px;
+      text-align: left;
+      color: #555555; }
+    #vijesti .container-vijesti .short-text p {
+      margin-top: 0;
+      margin-bottom: 16px;
+      text-align: left;
+      font-family: "PT Sans";
+      color: #656565; }
+  #vijesti .container-vijesti .long-text p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-align: left;
+    font-family: "PT Sans";
+    color: #656565; }
+
 .wrapper-bot {
-  width: 59%;
+  width: 60%;
   height: 400px;
   margin: auto;
   margin-top: 60px;
@@ -347,32 +402,67 @@ p {
           text-decoration: none; }
         .wrapper-bot #container-bot #container-bot-left #kontakt-info li a:hover {
           color: #5b7a74; }
-    .wrapper-bot #container-bot #container-bot-right {
-      height: 130px; }
-      .wrapper-bot #container-bot #container-bot-right h3 {
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-family: "Roboto Condensed";
-        font-size: 22px;
+    .wrapper-bot #container-bot #container-bot-right h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-family: "Roboto Condensed";
+      font-size: 22px;
+      font-weight: 300;
+      color: #FFFFFF;
+      opacity: 0.8;
+      line-height: 1.1; }
+    .wrapper-bot #container-bot #container-bot-right #adresa-info {
+      margin-top: 0;
+      margin-bottom: 10px;
+      list-style: none;
+      padding: 0; }
+      .wrapper-bot #container-bot #container-bot-right #adresa-info li {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        font-family: "PT Sans";
+        font-size: 16px;
         font-weight: 300;
-        color: #FFFFFF;
-        opacity: 0.8;
-        line-height: 1.1; }
-      .wrapper-bot #container-bot #container-bot-right #adresa-info {
-        margin-top: 0;
-        margin-bottom: 10px;
-        list-style: none;
-        padding: 0; }
-        .wrapper-bot #container-bot #container-bot-right #adresa-info li {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -moz-flex;
-          display: -ms-flexbox;
-          display: flex;
-          font-family: "PT Sans";
-          font-size: 16px;
-          font-weight: 300;
-          color: rgba(255, 255, 255, 0.5);
-          line-height: 22px; }
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 22px; }
+
+@media (max-width: 599px) {
+  .wrapper-mid {
+    width: 90%; }
+
+  .wrapper-bot {
+    width: 90%; }
+
+  .wrapper-top #navbar {
+    width: 90%; } }
+@media (min-width: 600px) and (max-width: 899px) {
+  .wrapper-mid {
+    width: 80%; }
+
+  .wrapper-bot {
+    width: 80%; }
+
+  .wrapper-top #navbar {
+    width: 80%; } }
+@media (min-width: 900px) and (max-width: 1199px) {
+  .wrapper-mid {
+    width: 80%; }
+
+  .wrapper-bot {
+    width: 80%; }
+
+  .wrapper-top #navbar {
+    width: 80%; } }
+@media (min-width: 1200px) and (max-width: 1799px) {
+  .wrapper-mid {
+    width: 70%; }
+
+  .wrapper-bot {
+    width: 70%; }
+
+  .wrapper-top #navbar {
+    width: 70%; } }
 
 /*# sourceMappingURL=blanje.css.map */
