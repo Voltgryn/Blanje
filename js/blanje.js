@@ -140,3 +140,9 @@ $("#go-kontakt").click(function (e) {
   $("html, body").animate({ scrollTop: kontakt.top - 180 }, 300);
   return false;
 });
+
+$("#show-gallery").on("click", showGallery);
+
+function showGallery() {
+  $("#gallery-opcenito").slideToggle(300);
+}
