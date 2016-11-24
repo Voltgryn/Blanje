@@ -1,5 +1,6 @@
 $(document).ready(function () {
   $("#image-slider > img#1").show();
+  $("#page1").css("display", "flex");
   startSlider();
 });
 
@@ -110,6 +111,34 @@ $(window).scroll(function () {
   }
 });
 
+visibility = $("#pocetna").offset();
+isHoverHandled = false;
+isHovered = false;
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() > visibility.top - 180 && isHovered == false) {
+    $(".wrapper-top").css("opacity", "0");
+    isHoverHandled = true;
+  } else {
+    $(".wrapper-top").css("opacity", "1");
+    isHoverHandled = false;
+  }
+});
+
+$(".wrapper-top").on("mouseenter", function () {
+  if (isHoverHandled) {
+    isHovered = true;
+    $(".wrapper-top").css("opacity", "1");
+  }
+});
+
+$(".wrapper-top").on("mouseleave", function () {
+  if (isHoverHandled) {
+    isHovered = false;
+    $(".wrapper-top").css("opacity", "0");
+  }
+});
+
 $("#go-pocetna").click(function (e) {
   e.preventDefault();
   var pocetna = $("#pocetna").offset();
@@ -141,8 +170,3 @@ $("#go-kontakt").click(function (e) {
   return false;
 });
 
-$("#show-gallery").on("click", showGallery);
-
-function showGallery() {
-  $("#gallery-opcenito").slideToggle(300);
-}

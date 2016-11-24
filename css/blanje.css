@@ -38,7 +38,8 @@ p {
 
 .wrapper-top {
   width: 100%;
-  z-index: 10; }
+  z-index: 10;
+  transition: opacity 0.5s ease; }
   .wrapper-top #header {
     width: 100%;
     height: 120px;
@@ -251,7 +252,8 @@ p {
       max-width: 400px; }
       #vijesti .container-news .container-news-image img {
         width: 100%;
-        max-height: 300px; }
+        max-height: 300px;
+        border: 1px solid rgba(255, 255, 255, 0.3); }
     #vijesti .container-news .container-news-text {
       display: -webkit-box;
       display: -webkit-flex;
@@ -282,15 +284,23 @@ p {
     text-align: center;
     color: #555555; }
   #galerija .container-gallery {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
     margin-top: 30px;
     padding-left: 5%;
     padding-right: 5%;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(23, 23, 23, 0.1); }
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(23, 23, 23, 0.1);
+    overflow: hidden; }
     #galerija .container-gallery h3 {
-      margin: 0 auto;
+      margin: 0;
       margin-bottom: 20px;
       font-size: 18px;
       text-align: left;
@@ -310,8 +320,25 @@ p {
         height: 19.5%;
         min-height: 180px;
         max-height: 180px;
-        padding: 0;
-        object-fit: cover; }
+        margin-bottom: 0.5%;
+        object-fit: cover;
+        border: 1px solid rgba(255, 255, 255, 0.3); }
+    #galerija .container-gallery .container-gallery-navigation {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 14px; }
+      #galerija .container-gallery .container-gallery-navigation h3 {
+        margin: 0;
+        padding: 8px 16px 8px;
+        color: #FFFFFF;
+        font-weight: 100;
+        background-color: #72968f;
+        border: 1px solid rgba(255, 255, 255, 0.3); }
 
 #o-nama h2 {
   margin-top: 30px;
@@ -349,8 +376,7 @@ p {
       margin-top: 20px;
       margin-bottom: 20px;
       background-color: #72968f;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 5px; }
+      border: 1px solid rgba(255, 255, 255, 0.3); }
       #o-nama #o-nama-bot #tko-smo #container-ljudi .ljudi .picture {
         position: relative;
         height: 70%;

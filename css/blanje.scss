@@ -76,6 +76,7 @@ p {
 .wrapper-top {
   width: 100%;
   z-index: 10;
+  transition: opacity 0.5s ease;
 
   #header {
     width: 100%;
@@ -310,10 +311,10 @@ p {
       min-width: 200px;
       max-width: 400px;
       
-
       img {
         width: 100%;
         max-height: 300px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
       }
     }
 
@@ -323,7 +324,6 @@ p {
       justify-content: flex-start;
       align-items: center;
       width: 55%;
-      
 
       h3 {
         margin: 0 auto;
@@ -354,16 +354,20 @@ p {
   }
 
   .container-gallery {
+    @include flexbox;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
     margin-top: 30px;
     padding-left: 5%;
     padding-right: 5%;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     border-bottom: 1px solid rgba(23, 23, 23, 0.1);
+    overflow: hidden;
 
     h3 {
-      margin: 0 auto;
+      margin: 0;
       margin-bottom: 20px;
       font-size: 18px;
       text-align: left;
@@ -382,8 +386,26 @@ p {
         height: 19.5%;
         min-height: 180px;
         max-height: 180px;
-        padding: 0;
+        margin-bottom: 0.5%;
         object-fit: cover;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    }
+    
+    .container-gallery-navigation {
+      @include flexbox;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 14px;
+
+      h3 {
+        margin: 0;
+        padding: 8px 16px 8px;
+        color: #FFFFFF;
+        font-weight: 100;
+        background-color: #72968f;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        //border-radius: 1px;
       }
     }
   }
@@ -434,7 +456,7 @@ p {
           margin-bottom: 20px;
           background-color: #72968f;
           border: 1px solid rgba(255, 255, 255, 0.3);
-          border-radius: 5px;
+          //border-radius: 1px;
 
           .picture {
             position: relative;
@@ -616,6 +638,7 @@ p {
     width: 80%;
     }
   }
+
   #galerija {
     .container-gallery {
       .container-gallery-images {
@@ -642,6 +665,7 @@ p {
     width: 80%;
     }
   }
+
   #galerija {
     .container-gallery {
       .container-gallery-images {
