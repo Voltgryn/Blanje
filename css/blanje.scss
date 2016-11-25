@@ -75,7 +75,6 @@ p {
 
 .wrapper-top {
   width: 100%;
-  z-index: 10;
   transition: opacity 0.5s ease;
 
   #header {
@@ -98,15 +97,14 @@ p {
   }
   
   #navbar {
-    margin: auto;
-    width: 60%;
-    height: 60px;
-    background-color: rgba(23, 23, 23, 0.3);
-    border-radius: 0 0 5px 5px;
+    width: 100%;
+    z-index: 10;
     transition: all 0.5s ease;
 
     #menu {
       @include flexbox;
+      width: 60%;
+      height: 60px;
       font-size: 18px;
       color: white;
       text-transform: uppercase;
@@ -114,7 +112,10 @@ p {
       line-height: 60px;
       justify-content: space-around;
       padding: 0;
-      margin: 0;
+      margin: 0 auto;
+      background-color: rgba(23, 23, 23, 0.3);
+      border-radius: 0 0 5px 5px;
+      transition: all 0.5s ease;
 
       li {
         @include flexbox;
@@ -456,7 +457,6 @@ p {
           margin-bottom: 20px;
           background-color: #72968f;
           border: 1px solid rgba(255, 255, 255, 0.3);
-          //border-radius: 1px;
 
           .picture {
             position: relative;
@@ -608,7 +608,9 @@ p {
 
   .wrapper-top {
     #navbar {
-    width: 90%;
+      #menu {
+        width: 90%;
+      }
     }
   }
 
@@ -635,7 +637,9 @@ p {
 
   .wrapper-top {
     #navbar {
-    width: 80%;
+      #menu {
+        width: 80%;
+      }
     }
   }
 
@@ -662,7 +666,9 @@ p {
 
   .wrapper-top {
     #navbar {
-    width: 80%;
+      #menu {
+        width: 80%;
+      }
     }
   }
 
@@ -689,7 +695,9 @@ p {
 
   .wrapper-top {
     #navbar {
-    width: 70%;
+      #menu {
+        width: 70%;
+      }
     }
   }
 
