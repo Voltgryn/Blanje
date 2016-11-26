@@ -315,7 +315,8 @@ p {
       justify-content: space-between;
       flex-wrap: wrap;
       width: 100%;
-      display: none; }
+      display: none;
+      overflow: hidden; }
       #galerija .container-gallery .container-gallery-images img {
         width: 19.5%;
         height: 19.5%;
@@ -340,6 +341,10 @@ p {
         font-weight: 100;
         background-color: #72968f;
         border: 1px solid rgba(255, 255, 255, 0.3); }
+      #galerija .container-gallery .container-gallery-navigation h3:hover {
+        background-color: #41625b; }
+      #galerija .container-gallery .container-gallery-navigation #prev-page h3 {
+        display: none; }
 
 #o-nama h2 {
   margin-top: 30px;

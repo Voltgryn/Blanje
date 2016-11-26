@@ -381,6 +381,7 @@ p {
       flex-wrap: wrap;
       width: 100%;
       display: none;
+      overflow: hidden;
 
       img {
         width: 19.5%;
@@ -406,7 +407,16 @@ p {
         font-weight: 100;
         background-color: #72968f;
         border: 1px solid rgba(255, 255, 255, 0.3);
-        //border-radius: 1px;
+      }
+
+      h3:hover {
+        background-color: #41625b;
+      }
+
+      #prev-page {
+        h3 {
+          display: none;
+        }
       }
     }
   }

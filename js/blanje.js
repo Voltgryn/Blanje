@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	$("#image-slider > img#1").show();
-	$("#page1").css("display", "flex");
+	$("#page" + 1).css("display", "flex");
 	startSlider();
 });
 
@@ -10,6 +10,7 @@ $(document).ready(function () {
 sliderStarted = false;
 currentSlide = 1;
 nextSlide = 2;
+imageCount = $("#image-slider > img").length;
 
 $("#prev").on("click", prev);
 $("#next").on("click", next);
@@ -24,12 +25,11 @@ $(window).on("blur", stopSlider);
 
 function startSlider() {
 	if (sliderStarted == false) {
-		count = $("#image-slider > img").length;
 
 		loop = setInterval(function () {
-			if (nextSlide > count) {
+			if (nextSlide > imageCount) {
 				nextSlide = 1;
-				currentSlide = count;
+				currentSlide = imageCount;
 			}
 
 			$("#image-slider > img#" + currentSlide).hide("slide", { direction: "left" }, 600);
@@ -53,7 +53,7 @@ function prev() {
 	newSlide = currentSlide;
 
 	if (newSlide == 1) {
-		currentSlide = count;
+		currentSlide = imageCount;
 	} else {
 		currentSlide = newSlide - 1;
 	}
@@ -72,7 +72,7 @@ function next() {
 	stopSlider();
 	newSlide = currentSlide;
 
-	if (newSlide == count) {
+	if (newSlide == imageCount) {
 		currentSlide = 1;
 	} else {
 		currentSlide = newSlide + 1;
@@ -138,42 +138,98 @@ $(window).on("click", function () {
 
 $("#go-pocetna").click(function (e) {
 	e.preventDefault();
-	var pocetna = $("#pocetna").offset();
-	$("html, body").animate({ scrollTop: pocetna.top - 59 }, 300);
+	var pocetna = $("#pocetna").offset().top;
+	$("html, body").animate({ scrollTop: pocetna - 60 }, 300);
 	isHoverHandled = true;
 	isSlidedByClick = true;
 	return false;
 });
 $("#go-vijesti").click(function (e) {
 	e.preventDefault();
-	var vijesti = $("#vijesti").offset();
-	$("html, body").animate({ scrollTop: vijesti.top - 59 }, 300);
+	var vijesti = $("#vijesti").offset().top;
+	$("html, body").animate({ scrollTop: vijesti - 60 }, 300);
 	isHoverHandled = true;
 	isSlidedByClick = true;
 	return false;
 });
 $("#go-galerija").click(function (e) {
 	e.preventDefault();
-	var galerija = $("#galerija").offset();
-	$("html, body").animate({ scrollTop: galerija.top - 59 }, 300);
+	var galerija = $("#galerija").offset().top;
+	$("html, body").animate({ scrollTop: galerija - 60 }, 300);
 	isHoverHandled = true;
 	isSlidedByClick = true;
 	return false;
 });
 $("#go-o-nama").click(function (e) {
 	e.preventDefault();
-	var oNama = $("#o-nama").offset();
-	$("html, body").animate({ scrollTop: oNama.top - 59 }, 300);
+	var oNama = $("#o-nama").offset().top;
+	$("html, body").animate({ scrollTop: oNama - 60 }, 300);
 	isHoverHandled = true;
 	isSlidedByClick = true;
 	return false;
 });
 $("#go-kontakt").click(function (e) {
 	e.preventDefault();
-	var kontakt = $("#kontakt").offset();
-	$("html, body").animate({ scrollTop: kontakt.top - 59 }, 300);
+	var kontakt = $("#kontakt").offset().top;
+	$("html, body").animate({ scrollTop: kontakt - 60 }, 300);
 	isHoverHandled = true;
 	isSlidedByClick = true;
 	return false;
 });
 
+
+// Gallery pages
+
+currentPage = 1;
+
+pageCount = $(".container-gallery-images").length;
+
+$("#prev-page").on("click", function () {
+	prevPage();
+});
+
+$("#next-page").on("click", function () {
+	nextPage();
+});
+
+function prevPage() {
+	newPage = currentPage - 1;
+
+	if (newPage >= 1) {
+		$(".container-gallery-images").hide();
+		$("#page" + newPage).css("display", "flex");
+
+		currentPage = newPage;
+		newPage = newPage - 1;
+	}
+
+	if (newPage > 0) {
+		$("#prev-page h3").html("Stranica " + newPage);
+		$("#prev-page h3").fadeIn(300);
+	} else {
+		$("#prev-page h3").fadeOut(300);
+	}
+	$("#next-page h3").fadeIn(300);
+	$("#next-page h3").html("Stranica " + (currentPage + 1));
+}
+
+function nextPage() {
+	newPage = currentPage + 1;
+
+	if (newPage <= pageCount) {
+		$(".container-gallery-images").hide();
+		$("#page" + newPage).css("display", "flex");
+
+		currentPage = newPage;
+		newPage = newPage + 1;
+	}
+
+	if (newPage < (pageCount + 1)) {
+		$("#next-page h3").html("Stranica " + newPage);
+		$("#next-page h3").fadeIn(300);
+	} else {
+		$("#next-page h3").fadeOut(300);
+	}
+	$("#prev-page h3").fadeIn(300);
+	$("#prev-page h3").html("Stranica " + (currentPage - 1));
+}
