@@ -1,6 +1,7 @@
 $(document).ready(function () {
 	$("#image-slider > img#1").show();
 	$("#page" + 1).css("display", "flex");
+
 	startSlider();
 });
 
@@ -233,3 +234,30 @@ function nextPage() {
 	$("#prev-page h3").fadeIn(300);
 	$("#prev-page h3").html("Stranica " + (currentPage - 1));
 }
+
+
+// Gallery images
+
+$(".container-image img").on("click", function () {
+	getPictureID(this);
+});
+
+function getPictureID(picture) {
+	pictureID = $("<img />",
+		{
+			id: picture.id,
+			src: picture.src
+		});
+
+	$("#gallery-cover").fadeIn(500);
+	$("#high-res-pictures").append(pictureID);
+}
+
+$("#gallery-cover").on("click", function () {
+	$("#high-res-pictures img").fadeOut(500, function () {
+		$("#high-res-pictures img").remove();
+	});
+	$(this).fadeOut(500);
+});
+
+
