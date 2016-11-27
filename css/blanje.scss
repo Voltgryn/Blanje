@@ -347,6 +347,37 @@ p {
 #galerija {
   padding-bottom: 30px;
 
+  #gallery-cover {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+
+    #high-res-pictures {
+      width: 80%;
+      height: 80%;
+      margin: 0 auto;
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      @include flexbox;
+      justify-content: center;
+      align-items: center;
+      
+      img {
+        z-index: 50;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+      }
+    }
+  }
+
   h2 {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -382,15 +413,21 @@ p {
       width: 100%;
       display: none;
       overflow: hidden;
-
-      img {
+      position: relative;
+      
+      .container-image {
         width: 19.5%;
         height: 19.5%;
         min-height: 180px;
         max-height: 180px;
         margin-bottom: 0.5%;
+        position: relative;
+      }
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        border: 1px solid rgba(255, 255, 255, 0.3);
       }
     }
     
@@ -607,6 +644,7 @@ p {
   }
 }
 
+
 @media (max-width: 599px) {
   .wrapper-mid {
     width: 90%;
@@ -627,7 +665,7 @@ p {
   #galerija {
     .container-gallery {
       .container-gallery-images {
-        img {
+        .container-image {
           width: 100%;
           height: 100%;
         }   
@@ -656,7 +694,7 @@ p {
   #galerija {
     .container-gallery {
       .container-gallery-images {
-        img {
+        .container-image {
           width: 49.5%;
           height: 49.5%;
         }   
@@ -685,7 +723,7 @@ p {
   #galerija {
     .container-gallery {
       .container-gallery-images {
-        img {
+        .container-image {
           width: 32.5%;
           height: 32.5%;
         }   
@@ -714,7 +752,7 @@ p {
   #galerija {
     .container-gallery {
       .container-gallery-images {
-        img {
+        .container-image {
           width: 24.5%;
           height: 24.5%;
         }   
