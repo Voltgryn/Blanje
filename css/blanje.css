@@ -56,7 +56,7 @@ p {
       text-transform: uppercase; }
   .wrapper-top #navbar {
     width: 100%;
-    z-index: 10;
+    z-index: 9;
     transition: all 0.5s ease; }
     .wrapper-top #navbar #menu {
       display: -webkit-box;
@@ -137,10 +137,10 @@ p {
     height: 34px; }
   #pocetna #image-slider i:hover {
     opacity: 0.9; }
-  #pocetna #image-slider #prev {
+  #pocetna #image-slider #prev-slide {
     float: left;
     left: 20px; }
-  #pocetna #image-slider #next {
+  #pocetna #image-slider #next-slide {
     float: right;
     right: 20px; }
   #pocetna #image-slider img {
@@ -285,9 +285,32 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9;
+    z-index: 10;
     background-color: rgba(0, 0, 0, 0.9);
     display: none; }
+    #galerija #gallery-cover i {
+      position: absolute;
+      font-size: 34px;
+      top: 45%;
+      color: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      font-weight: 900 !important;
+      width: 34px;
+      height: 34px; }
+    #galerija #gallery-cover i:hover {
+      opacity: 0.9; }
+    #galerija #gallery-cover #prev-picture {
+      float: left;
+      left: 20px;
+      display: none; }
+    #galerija #gallery-cover #next-picture {
+      float: right;
+      right: 20px; }
+    #galerija #gallery-cover #exit-picture {
+      float: right;
+      top: 20px;
+      right: 20px;
+      font-size: 24px; }
     #galerija #gallery-cover #high-res-pictures {
       width: 80%;
       height: 80%;
@@ -303,7 +326,7 @@ p {
       justify-content: center;
       align-items: center; }
       #galerija #gallery-cover #high-res-pictures img {
-        z-index: 50;
+        display: none;
         position: absolute;
         width: 100%;
         height: 100%;
