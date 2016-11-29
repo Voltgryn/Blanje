@@ -9,7 +9,13 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  height: 100%;
+  overflow-y: hidden; }
+
 body {
+  height: 100%;
+  overflow-y: scroll;
   background: url("../images/background.png") no-repeat center fixed;
   background-size: cover;
   font-family: "Roboto Condensed";
@@ -56,7 +62,8 @@ p {
       text-transform: uppercase; }
   .wrapper-top #navbar {
     width: 100%;
-    z-index: 9; }
+    z-index: 9;
+    overflow: hidden; }
     .wrapper-top #navbar #menu {
       display: -webkit-box;
       display: -webkit-flex;
