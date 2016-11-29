@@ -43,19 +43,17 @@ $secondaryFont: "PT Sans";
 
 html {
   // Mobile background image fix
-  
-  background: url("../images/background.png") no-repeat center fixed; 
-  background-size: cover;
-  
+  height: 100%;
 }
 
 body {
-  
-  //overflow-y: scroll; 
-  
+  height: 100%;
+  overflow-y: scroll;
   font-family: $primaryFont;
   font-size: 14px; 
   margin: 0;
+  background: url(../images/background.png) no-repeat center fixed;
+  background-size: cover;
 }
 
 a {
@@ -809,8 +807,8 @@ p {
 }
 
 @media (max-width: 900px) {
-  body {
-    background: url("../images/smaller-background.png") no-repeat center fixed; 
+  html {
+    overflow-y: hidden;
   }
 }
 
