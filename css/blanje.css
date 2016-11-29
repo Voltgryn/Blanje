@@ -10,13 +10,16 @@
   box-sizing: border-box; }
 
 html {
-  background: url("../images/background.png") no-repeat center fixed;
-  background-size: cover; }
+  height: 100%; }
 
 body {
+  height: 100%;
+  overflow-y: scroll;
   font-family: "Roboto Condensed";
   font-size: 14px;
-  margin: 0; }
+  margin: 0;
+  background: url(../images/smaller-background.png) no-repeat center fixed;
+  background-size: cover; }
 
 a {
   outline: none;
@@ -624,8 +627,8 @@ p {
     width: 49.5%;
     height: 49.5%; } }
 @media (max-width: 900px) {
-  body {
-    background: url("../images/smaller-background.png") no-repeat center fixed; } }
+  html {
+    overflow-y: hidden; } }
 @media (min-width: 900px) and (max-width: 1199px) {
   .wrapper-mid {
     max-width: 1080px; }
