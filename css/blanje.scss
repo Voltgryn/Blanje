@@ -798,6 +798,12 @@ p {
   }
 }
 
+@media (max-width: 900px) {
+  body {
+    background: url("../images/smaller-background.png") no-repeat center fixed; 
+  }
+}
+
 @media (min-width: 900px) and (max-width: 1199px) {
   .wrapper-mid {
     max-width: 1080px;
