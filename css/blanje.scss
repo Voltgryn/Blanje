@@ -41,7 +41,15 @@ $secondaryFont: "PT Sans";
   @include border-box;
 }
 
-body { 
+html {
+  // Mobile background image fix
+  height: 100%;           
+  overflow-y: hidden;
+}
+
+body {
+  height: 100%;
+  overflow-y: scroll; 
   background: url("../images/background.png") no-repeat center fixed; 
   background-size: cover;
   font-family: $primaryFont;
@@ -99,6 +107,7 @@ p {
   #navbar {
     width: 100%;
     z-index: 9;
+    overflow: hidden;
 
     #menu {
       @include flexbox;
