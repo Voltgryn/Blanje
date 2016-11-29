@@ -18,7 +18,7 @@ body {
   font-family: "Roboto Condensed";
   font-size: 14px;
   margin: 0;
-  background: url(../images/smaller-background.png) no-repeat center fixed;
+  background: url(../images/background.png) no-repeat center fixed;
   background-size: cover; }
 
 a {
