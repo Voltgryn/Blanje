@@ -14,7 +14,6 @@ html {
 
 body {
   height: 100%;
-  overflow-y: scroll;
   font-family: "Roboto Condensed";
   font-size: 14px;
   margin: 0;
@@ -36,6 +35,58 @@ p {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.7em; }
+
+#mobile-navbar {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  z-index: 9;
+  background-color: #72968f;
+  display: none; }
+  #mobile-navbar h3 {
+    padding: 5px 15px;
+    margin-right: 1%;
+    font-family: "Roboto Condensed";
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3); }
+
+#mobile-menu {
+  width: 100%;
+  position: fixed;
+  top: 40px;
+  z-index: 9;
+  background-color: #72968f;
+  display: none; }
+  #mobile-menu ul {
+    padding: 0;
+    margin: 0 auto;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    list-style: none;
+    line-height: 40px; }
+    #mobile-menu ul li {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      height: 40px;
+      margin-bottom: 5px;
+      padding-left: 5%;
+      background-color: rgba(23, 23, 23, 0.3); }
+    #mobile-menu ul i {
+      color: rgba(255, 255, 255, 0.3);
+      padding-right: 10px;
+      font-size: 19px;
+      line-height: 40px; }
+    #mobile-menu ul a {
+      color: inherit;
+      text-decoration: none;
+      display: inline-block; }
 
 #pre-header {
   width: 100%;
@@ -146,10 +197,10 @@ p {
     opacity: 0.9; }
   #pocetna #image-slider #prev-slide {
     float: left;
-    left: 20px; }
+    left: 2%; }
   #pocetna #image-slider #next-slide {
     float: right;
-    right: 20px; }
+    right: 2%; }
   #pocetna #image-slider img {
     position: absolute;
     left: 0;
@@ -263,12 +314,12 @@ p {
     #vijesti .container-news .container-news-image {
       width: 49.5%;
       min-width: 200px;
-      max-width: 460px;
       max-height: 330px; }
       #vijesti .container-news .container-news-image img {
         width: 100%;
         height: 100%;
-        border: 1px solid rgba(255, 255, 255, 0.3); }
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        object-fit: cover; }
     #vijesti .container-news .container-news-text {
       display: -webkit-box;
       display: -webkit-flex;
@@ -314,15 +365,16 @@ p {
       opacity: 0.9; }
     #galerija #gallery-cover #prev-picture {
       float: left;
-      left: 20px;
+      left: 1%;
       display: none; }
     #galerija #gallery-cover #next-picture {
       float: right;
-      right: 20px; }
+      right: 1%;
+      display: none; }
     #galerija #gallery-cover #exit-picture {
       float: right;
       top: 20px;
-      right: 20px;
+      right: 1%;
       font-size: 24px; }
     #galerija #gallery-cover #high-res-pictures {
       width: 80%;
@@ -497,7 +549,6 @@ p {
 .wrapper-bot {
   max-width: 1080px;
   width: 100%;
-  height: 400px;
   margin: auto;
   margin-top: 60px;
   margin-bottom: 60px;
@@ -517,21 +568,75 @@ p {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; }
-    .wrapper-bot #container-bot #container-bot-left h3 {
-      margin-top: 20px;
-      margin-bottom: 10px;
-      font-family: "Roboto Condensed";
-      font-size: 20px;
-      font-weight: 300;
-      color: #FFFFFF;
-      opacity: 0.8;
-      line-height: 1.1; }
-    .wrapper-bot #container-bot #container-bot-left #kontakt-info {
-      margin-top: 0;
-      margin-bottom: 10px;
-      list-style: none;
-      padding: 0; }
-      .wrapper-bot #container-bot #container-bot-left #kontakt-info li {
+    .wrapper-bot #container-bot #container-bot-left {
+      width: 45%;
+      margin-top: 60px;
+      margin-bottom: 60px; }
+      .wrapper-bot #container-bot #container-bot-left #container-form {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .wrapper-bot #container-bot #container-bot-left #container-form input {
+          width: 100%;
+          padding: 12px 0;
+          font-family: "PT Sans";
+          font-size: 14px;
+          font-weight: 300;
+          color: rgba(255, 255, 255, 0.5);
+          background-color: transparent;
+          outline: none;
+          border: none;
+          border-bottom: 2px solid #72968f; }
+        .wrapper-bot #container-bot #container-bot-left #container-form textarea {
+          width: 100%;
+          min-height: 80px;
+          padding: 12px 0;
+          font-family: "PT Sans";
+          font-size: 14px;
+          font-weight: 300;
+          color: rgba(255, 255, 255, 0.5);
+          background-color: transparent;
+          outline: none;
+          border: none;
+          border-bottom: 2px solid #72968f;
+          word-wrap: break-word;
+          resize: none; }
+        .wrapper-bot #container-bot #container-bot-left #container-form input:focus::-webkit-input-placeholder {
+          color: transparent; }
+        .wrapper-bot #container-bot #container-bot-left #container-form textarea:focus::-webkit-input-placeholder {
+          color: transparent; }
+        .wrapper-bot #container-bot #container-bot-left #container-form #submit {
+          max-width: 120px;
+          height: 30px;
+          margin: 0;
+          margin-top: 5px;
+          padding: 0 16px 0;
+          color: #FFFFFF;
+          font-family: "PT Sans";
+          font-size: 14px;
+          background-color: #72968f;
+          outline: none;
+          border: none; }
+        .wrapper-bot #container-bot #container-bot-left #container-form #submit:hover {
+          background-color: #41625b; }
+    .wrapper-bot #container-bot #container-bot-right {
+      width: 45%;
+      margin-top: 60px;
+      margin-bottom: 60px; }
+      .wrapper-bot #container-bot #container-bot-right h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family: "Roboto Condensed";
+        font-size: 20px;
+        font-weight: 300;
+        color: #FFFFFF;
+        opacity: 0.8;
+        line-height: 1.1; }
+      .wrapper-bot #container-bot #container-bot-right li {
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
@@ -543,46 +648,27 @@ p {
         font-weight: 300;
         color: rgba(255, 255, 255, 0.5);
         line-height: 20px; }
-        .wrapper-bot #container-bot #container-bot-left #kontakt-info li i {
+        .wrapper-bot #container-bot #container-bot-right li i {
           font-size: 14px;
           color: rgba(255, 255, 255, 0.2);
           padding-right: 10px;
           line-height: 20px; }
-        .wrapper-bot #container-bot #container-bot-left #kontakt-info li a {
+        .wrapper-bot #container-bot #container-bot-right li a {
           color: #72968f;
           text-decoration: none; }
-        .wrapper-bot #container-bot #container-bot-left #kontakt-info li a:hover {
+        .wrapper-bot #container-bot #container-bot-right li a:hover {
           color: #5b7a74; }
-    .wrapper-bot #container-bot #container-bot-right h3 {
-      margin-top: 20px;
-      margin-bottom: 10px;
-      font-family: "Roboto Condensed";
-      font-size: 20px;
-      font-weight: 300;
-      color: #FFFFFF;
-      opacity: 0.8;
-      line-height: 1.1; }
-    .wrapper-bot #container-bot #container-bot-right #adresa-info {
-      margin-top: 0;
-      margin-bottom: 10px;
-      list-style: none;
-      padding: 0; }
-      .wrapper-bot #container-bot #container-bot-right #adresa-info li {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex;
-        flex-wrap: wrap;
-        font-family: "PT Sans";
-        font-size: 14px;
-        font-weight: 300;
-        color: rgba(255, 255, 255, 0.5);
-        line-height: 20px; }
+      .wrapper-bot #container-bot #container-bot-right #contact-info {
+        margin-top: 0;
+        margin-bottom: 10px;
+        list-style: none;
+        padding: 0; }
+      .wrapper-bot #container-bot #container-bot-right #adresa-info {
+        margin-top: 0;
+        margin-bottom: 10px;
+        list-style: none;
+        padding: 0; }
 
-@media (max-width: 499px) {
-  .wrapper-bot #container-bot #container-bot-left {
-    width: 100%; } }
 @media (max-width: 599px) {
   .wrapper-mid {
     max-width: 580px; }
@@ -590,9 +676,11 @@ p {
   .wrapper-bot {
     max-width: 580px; }
 
-  .wrapper-top #navbar #menu {
-    transition-property: none;
-    visibility: hidden; }
+  #pre-header {
+    height: 234px; }
+
+  #post-header {
+    height: 200px; }
 
   #pocetna #info .wrapper-info {
     width: 100%; }
@@ -606,16 +694,18 @@ p {
   #galerija .container-gallery .container-gallery-images .container-image {
     width: 100%;
     height: 100%; } }
+@media (max-width: 699px) {
+  .wrapper-bot #container-bot #container-bot-left {
+    width: 100%; }
+  .wrapper-bot #container-bot #container-bot-right {
+    width: 100%;
+    margin-top: 0; } }
 @media (min-width: 600px) and (max-width: 899px) {
   .wrapper-mid {
     max-width: 880px; }
 
   .wrapper-bot {
     max-width: 880px; }
-
-  .wrapper-top #navbar #menu {
-    transition-property: none;
-    visibility: hidden; }
 
   #vijesti .container-news .container-news-image {
     width: 100%; }
@@ -628,7 +718,24 @@ p {
     height: 49.5%; } }
 @media (max-width: 900px) {
   html {
-    overflow-y: hidden; } }
+    overflow-y: hidden; }
+
+  body {
+    overflow-y: scroll;
+    background: url(../images/smaller-background.png) no-repeat center fixed; }
+
+  .wrapper-top #navbar #menu {
+    transition-property: none;
+    visibility: hidden; }
+
+  #mobile-navbar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; } }
 @media (min-width: 900px) and (max-width: 1199px) {
   .wrapper-mid {
     max-width: 1080px; }

@@ -10,6 +10,22 @@
 </head>
 
 <body>
+
+	<div id="mobile-navbar">
+		<a href="#" onclick="return false;">
+			<h3>Menu</h3>
+		</a>
+	</div>
+	<div id="mobile-menu">
+		<ul>
+			<li><i class="material-icons">home</i><a href="#pocetna">Početna</a></li>
+			<li><i class="material-icons">public</i><a href="#vijesti">Vijesti</a></li>
+			<li><i class="material-icons">photo</i><a href="#galerija">Galerija</a></li>
+			<li><i class="material-icons">people</i><a href="#o-nama">O nama</a></li>
+			<li><i class="material-icons">phone</i><a href="#kontakt">Kontakt</a></li>
+		</ul>
+	</div>
+
 	<div id="pre-header">
 	</div>
 
@@ -461,20 +477,32 @@
 	<div class="wrapper-bot" id="kontakt">
 		<div id="container-bot">
 			<div id="container-bot-left">
-				<h3>Kontakt informacije</h3>
-				<ul id="kontakt-info">
-					<li><i class="material-icons">phone</i>Telefon: 098/908-2099</li>
-					<li><i class="material-icons">email</i>E-mail:&nbsp<a href="mailto:boris.muminovic@gmail.com">boris.muminovic@gmail.com</a></li>
-					<li><i class="material-icons">web</i>Web-stranica:&nbsp<a href="https://voltgryn.github.io/blanje/">https://voltgryn.github.io/blanje</a></li>
-				</ul>
+				<div id="container-form">
+					<form action="./php/mail.php" method="POST" autocomplete="off">
+						<input name="name" placeholder="Ime">
+						<input name="email" type="email" placeholder="E-mail">
+						<textarea name="message" placeholder="Poruka"></textarea>
+						<input id="submit" name="submit" type="submit" value="Pošalji">
+					</form>
+				</div>
 			</div>
 			<div id="container-bot-right">
-				<h3>Adresa</h3>
-				<ul id="adresa-info">
-					<li>Glavna 20, Blanje,</li>
-					<li>Osječko-Baranjska,</li>
-					<li>Croatia</li>
-				</ul>
+				<div id="container-contact">
+					<h3>Kontakt informacije</h3>
+					<ul id="contact-info">
+						<li><i class="material-icons">phone</i>Telefon: 098/908-2099</li>
+						<li><i class="material-icons">email</i>E-mail:&nbsp<a href="mailto:boris.muminovic@gmail.com">boris.muminovic@gmail.com</a></li>
+						<li><i class="material-icons">web</i>Web-stranica:&nbsp<a href="https://voltgryn.github.io/blanje/">https://voltgryn.github.io/blanje</a></li>
+					</ul>
+				</div>
+				<div id="container-address">
+					<h3>Adresa</h3>
+					<ul id="adresa-info">
+						<li>Glavna 20, Blanje,</li>
+						<li>Osječko-Baranjska,</li>
+						<li>Croatia</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
