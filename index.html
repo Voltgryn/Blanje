@@ -11,6 +11,9 @@
 
 <body>
 
+	<div id="background">
+	</div>
+
 	<div id="mobile-navbar">
 		<a href="#" onclick="return false;">
 			<h3>Menu</h3>
@@ -18,11 +21,21 @@
 	</div>
 	<div id="mobile-menu">
 		<ul>
-			<li><i class="material-icons">home</i><a href="#pocetna">Početna</a></li>
-			<li><i class="material-icons">public</i><a href="#vijesti">Vijesti</a></li>
-			<li><i class="material-icons">photo</i><a href="#galerija">Galerija</a></li>
-			<li><i class="material-icons">people</i><a href="#o-nama">O nama</a></li>
-			<li><i class="material-icons">phone</i><a href="#kontakt">Kontakt</a></li>
+			<a href="#pocetna" id="go-pocetna-mobile">
+				<li><i class="material-icons">home</i>Početna</li>
+			</a>
+			<a href="#vijesti" id="go-vijesti-mobile">
+				<li><i class="material-icons">public</i>Vijesti</li>
+			</a>
+			<a href="#galerija" id="go-galerija-mobile">
+				<li><i class="material-icons">photo</i>Galerija</li>
+			</a>
+			<a href="#o-nama" id="go-o-nama-mobile">
+				<li><i class="material-icons">people</i>O nama</li>
+			</a>
+			<a href="#kontakt" id="go-kontakt-mobile">
+				<li><i class="material-icons">phone</i>Kontakt</li>
+			</a>
 		</ul>
 	</div>
 
@@ -476,7 +489,7 @@
 
 	<div class="wrapper-bot" id="kontakt">
 		<div id="container-bot">
-			<div id="container-bot-left">
+			<div id="container-bot-one">
 				<div id="container-form">
 					<form action="./php/mail.php" method="POST" autocomplete="off">
 						<input name="name" placeholder="Ime">
@@ -486,7 +499,7 @@
 					</form>
 				</div>
 			</div>
-			<div id="container-bot-right">
+			<div id="container-bot-two">
 				<div id="container-contact">
 					<h3>Kontakt informacije</h3>
 					<ul id="contact-info">
@@ -503,6 +516,9 @@
 						<li>Croatia</li>
 					</ul>
 				</div>
+			</div>
+			<div id="container-bot-three">
+
 			</div>
 		</div>
 	</div>

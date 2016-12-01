@@ -3,8 +3,17 @@ $(document).ready(function () {
 	$("#page" + 1).css("display", "flex");
 
 	startSlider();
+	resizeBackground();
 });
 
+// Background image FIX FOR MOBILE BROWSER ADDRESS BAR JUMP
+
+var screenHeight = $(window).height();
+$(window).resize(resizeBackground);
+
+function resizeBackground() {
+	$('#background').css('height', (screenHeight + 60) + 'px');
+}
 
 // Image slider
 
@@ -108,12 +117,12 @@ $(window).scroll(function () {
 	if ($(this).scrollTop() > navbarOffset) {
 		$("#navbar").css({ "position": "fixed", "top": "0" });
 		$("#menu").css("background-color", "rgba(80, 80, 80, 1)");
-		$("#post-header").css("height", "400px");
+		$("#post-header").css("height", "180px");
 		isNavbarFixed = true;
 	} else {
 		$("#navbar").css("position", "static");
 		$("#menu").css("background-color", "rgba(23, 23, 23, 0.3)");
-		$("#post-header").css("height", "340px");
+		$("#post-header").css("height", "120px");
 		isNavbarFixed = false;
 		$("#menu").css("opacity", "1");
 	}
@@ -142,10 +151,15 @@ $("#mobile-navbar h3").on("click", function () {
 
 function showMobile() {
 	$("#mobile-menu").slideToggle(500);
+	$("#mobile-menu li").css("background-color", "rgba(23, 23, 23, 0.3)")
 }
 
 $("#mobile-menu a").on("click", function () {
 	$("#mobile-menu").slideUp(500);
+});
+
+$("#mobile-menu li").on("click", function () {
+	$(this).css("background-color", "rgba(23, 23, 23, 0.6)")
 });
 
 // Smooth scroll
@@ -154,43 +168,65 @@ $("#go-pocetna").click(function (e) {
 	e.preventDefault();
 	var pocetna = $("#pocetna").offset().top;
 	$("html, body").animate({ scrollTop: pocetna - 60 }, 300);
-	isHoverHandled = true;
-	isSlidedByClick = true;
 	return false;
 });
 $("#go-vijesti").click(function (e) {
 	e.preventDefault();
 	var vijesti = $("#vijesti").offset().top;
 	$("html, body").animate({ scrollTop: vijesti - 60 }, 300);
-	isHoverHandled = true;
-	isSlidedByClick = true;
 	return false;
 });
 $("#go-galerija").click(function (e) {
 	e.preventDefault();
 	var galerija = $("#galerija").offset().top;
 	$("html, body").animate({ scrollTop: galerija - 60 }, 300);
-	isHoverHandled = true;
-	isSlidedByClick = true;
 	return false;
 });
 $("#go-o-nama").click(function (e) {
 	e.preventDefault();
 	var oNama = $("#o-nama").offset().top;
 	$("html, body").animate({ scrollTop: oNama - 60 }, 300);
-	isHoverHandled = true;
-	isSlidedByClick = true;
 	return false;
 });
 $("#go-kontakt").click(function (e) {
 	e.preventDefault();
 	var kontakt = $("#kontakt").offset().top;
 	$("html, body").animate({ scrollTop: kontakt - 60 }, 300);
-	isHoverHandled = true;
-	isSlidedByClick = true;
 	return false;
 });
 
+// Mobile smooth scroll
+
+$("#go-pocetna-mobile").click(function (e) {
+	e.preventDefault();
+	var pocetna = $("#pocetna").offset().top;
+	$("html, body").animate({ scrollTop: pocetna - 40 }, 300);
+	return false;
+});
+$("#go-vijesti-mobile").click(function (e) {
+	e.preventDefault();
+	var vijesti = $("#vijesti").offset().top;
+	$("html, body").animate({ scrollTop: vijesti - 40 }, 300);
+	return false;
+});
+$("#go-galerija-mobile").click(function (e) {
+	e.preventDefault();
+	var galerija = $("#galerija").offset().top;
+	$("html, body").animate({ scrollTop: galerija - 40 }, 300);
+	return false;
+});
+$("#go-o-nama-mobile").click(function (e) {
+	e.preventDefault();
+	var oNama = $("#o-nama").offset().top;
+	$("html, body").animate({ scrollTop: oNama - 40 }, 300);
+	return false;
+});
+$("#go-kontakt-mobile").click(function (e) {
+	e.preventDefault();
+	var kontakt = $("#kontakt").offset().top;
+	$("html, body").animate({ scrollTop: kontakt - 40 }, 300);
+	return false;
+});
 
 // Gallery pages
 
