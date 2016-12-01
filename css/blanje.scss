@@ -42,6 +42,11 @@ $secondaryFont: "PT Sans";
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
+html {
+  -ms-overflow-style: scrollbar;  /* Fixes scrollbar overlapping content in IE */
+  overflow-y: scroll;
+}
+
 body {
   font-family: $primaryFont;
   font-size: 14px; 
@@ -51,7 +56,6 @@ body {
 #background {
   background-image: url(../images/background.png);
   background-repeat:no-repeat;
-  background-attachment:fixed;
   background-position:center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -518,7 +522,7 @@ p {
     padding-right: 5%;
     padding-bottom: 30px;
     border-bottom: 1px solid rgba(23, 23, 23, 0.1);
-    overflow: hidden;
+    
 
     h3 {
       margin: 0;
@@ -734,6 +738,7 @@ p {
           border-bottom: 2px solid #72968f;
           word-wrap: break-word;
           resize: none;
+          -ms-overflow-style: none
         }
 
         input:focus::-webkit-input-placeholder {

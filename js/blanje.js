@@ -6,6 +6,7 @@ $(document).ready(function () {
 	resizeBackground();
 });
 
+
 // Background image FIX FOR MOBILE BROWSER ADDRESS BAR JUMP
 
 var screenHeight = $(window).height();
@@ -14,6 +15,7 @@ $(window).resize(resizeBackground);
 function resizeBackground() {
 	$('#background').css('height', (screenHeight + 60) + 'px');
 }
+
 
 // Image slider
 
@@ -129,12 +131,12 @@ $(window).scroll(function () {
 });
 
 $("#menu").on("mouseenter", function () {
-		$("#menu").css("opacity", "1");
-		isNavbarHovered = true;
+	$("#menu").css("opacity", "1");
+	isNavbarHovered = true;
 });
 
 $("#menu").on("mouseleave", function () {
-		isNavbarHovered = false;
+	isNavbarHovered = false;
 });
 
 $(window).on("click", function () {
@@ -142,6 +144,7 @@ $(window).on("click", function () {
 		$("#menu").css("opacity", "0");
 	}
 });
+
 
 // Mobile navbar
 
@@ -161,6 +164,7 @@ $("#mobile-menu a").on("click", function () {
 $("#mobile-menu li").on("click", function () {
 	$(this).css("background-color", "rgba(23, 23, 23, 0.6)")
 });
+
 
 // Smooth scroll
 
@@ -195,6 +199,7 @@ $("#go-kontakt").click(function (e) {
 	return false;
 });
 
+
 // Mobile smooth scroll
 
 $("#go-pocetna-mobile").click(function (e) {
@@ -227,6 +232,7 @@ $("#go-kontakt-mobile").click(function (e) {
 	$("html, body").animate({ scrollTop: kontakt - 40 }, 300);
 	return false;
 });
+
 
 // Gallery pages
 

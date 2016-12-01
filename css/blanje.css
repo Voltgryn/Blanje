@@ -10,6 +10,11 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 
+html {
+  -ms-overflow-style: scrollbar;
+  /* Fixes scrollbar overlapping content in IE */
+  overflow-y: scroll; }
+
 body {
   font-family: "Roboto Condensed";
   font-size: 14px;
@@ -18,7 +23,6 @@ body {
 #background {
   background-image: url(../images/background.png);
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -428,8 +432,7 @@ p {
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 30px;
-    border-bottom: 1px solid rgba(23, 23, 23, 0.1);
-    overflow: hidden; }
+    border-bottom: 1px solid rgba(23, 23, 23, 0.1); }
     #galerija .container-gallery h3 {
       margin: 0;
       margin-bottom: 20px;
@@ -616,7 +619,8 @@ p {
           border: none;
           border-bottom: 2px solid #72968f;
           word-wrap: break-word;
-          resize: none; }
+          resize: none;
+          -ms-overflow-style: none; }
         .wrapper-bot #container-bot #container-bot-one #container-form input:focus::-webkit-input-placeholder {
           color: transparent; }
         .wrapper-bot #container-bot #container-bot-one #container-form textarea:focus::-webkit-input-placeholder {
