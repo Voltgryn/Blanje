@@ -5,13 +5,17 @@ $(document).ready(function () {
 	startSlider();
 	resizeBackground();
 	objectFitImages();
+	initMap();
 });
 
 
 // Background image FIX FOR MOBILE BROWSER ADDRESS BAR JUMP
 
 var screenHeight = $(window).height();
-$(window).resize(resizeBackground);
+$(window).resize(function () {
+	resizeBackground();
+	initMap();
+});
 
 function resizeBackground() {
 	$('#background').css('height', (screenHeight + 60) + 'px');
@@ -393,3 +397,17 @@ function imageExit() {
 	$("#gallery-cover").fadeOut(500);
 }
 
+// Google maps
+
+function initMap() {
+	var blanje = { lat: 45.715531, lng: 18.083073 };
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 15,
+		center: blanje
+	});
+	var marker = new google.maps.Marker({
+		position: blanje,
+		map: map
+	});
+	google.maps.event.trigger(map, "resize");
+}
