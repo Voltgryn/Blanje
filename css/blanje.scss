@@ -609,7 +609,7 @@ p {
   }
 
   #o-nama-top {
-    border-bottom: 1px solid rgba(23, 23, 23, 0.1);
+    //border-bottom: 1px solid rgba(23, 23, 23, 0.1);
 
     #o-blanju {
       width: 100%;
@@ -619,6 +619,23 @@ p {
       padding-bottom: 30px;
     }
   }
+
+  #o-nama-video {
+    border-bottom: 1px solid rgba(23, 23, 23, 0.1);
+
+    #video {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      padding-left: 5%;
+      padding-right: 5%;
+      //padding-top: 30px;
+      //padding-bottom: 30px;
+      @include flexbox;
+      justify-content: center;
+      
+      }
+    }
 
   #o-nama-bot {
     #tko-smo {
@@ -640,7 +657,7 @@ p {
           margin-top: 20px;
           margin-bottom: 20px;
           background-color: #72968f;
-          border: 1px solid rgba(255, 255, 255, 0.3);
+          //border: 1px solid rgba(255, 255, 255, 0.3);
 
           .picture {
             position: relative;
