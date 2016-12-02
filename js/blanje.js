@@ -4,6 +4,7 @@ $(document).ready(function () {
 
 	startSlider();
 	resizeBackground();
+	objectFitImages();
 });
 
 
@@ -293,16 +294,20 @@ function nextPage() {
 
 $(".container-image img").on("click", function () {
 	getPictureId(this);
+
 });
 
 function getPictureId(picture) {
 	pictureId = parseInt(picture.id);
 	currentPicture = pictureId;
 	pictureCount = $(".container-gallery-images img").length;
-	console.log(currentPicture);
 
-	$("#gallery-cover").fadeIn(500);
-	$("#" + pictureId).clone().appendTo("#high-res-pictures").show();
+	$("#gallery-cover").fadeIn(500, function () {
+		$(".container-image img").removeClass("image-cover").addClass("image-contain");
+		objectFitImages();
+
+		$("#" + pictureId).clone().appendTo("#high-res-pictures").show();
+	});
 
 	if (currentPicture > 1) {
 		$("#prev-picture").fadeIn(300);
@@ -324,6 +329,9 @@ $("#next-picture").on("click", function () {
 	imageNext();
 });
 $("#exit-picture").on("click", function () {
+	$(".container-image img").removeClass("image-contain").addClass("image-cover");
+		objectFitImages();
+
 	$("#high-res-pictures img").fadeOut(500, function () {
 		$("#high-res-pictures img").remove();
 	});
