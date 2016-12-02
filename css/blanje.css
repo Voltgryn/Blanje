@@ -513,6 +513,7 @@ p {
     margin: 0 auto;
     padding-left: 5%;
     padding-right: 5%;
+    padding-bottom: 30px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;

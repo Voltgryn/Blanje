@@ -609,7 +609,6 @@ p {
   }
 
   #o-nama-top {
-    //border-bottom: 1px solid rgba(23, 23, 23, 0.1);
 
     #o-blanju {
       width: 100%;
@@ -630,7 +629,7 @@ p {
       padding-left: 5%;
       padding-right: 5%;
       //padding-top: 30px;
-      //padding-bottom: 30px;
+      padding-bottom: 30px;
       @include flexbox;
       justify-content: center;
       

@@ -5,7 +5,7 @@ $(document).ready(function () {
 	startSlider();
 	resizeBackground();
 	objectFitImages();
-	//initMap();
+	initMap();
 });
 
 
@@ -401,7 +401,7 @@ function imageExit() {
 
 function initMap() {
 	var blanje = { lat: 45.715531, lng: 18.083073 };
-	map = new google.maps.Map(document.getElementById('map'), {
+	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 15,
 		center: blanje
 	});
