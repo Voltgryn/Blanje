@@ -3,9 +3,11 @@ $(document).ready(function () {
 	$("#page" + 1).css("display", "flex");
 
 	startSlider();
-	resizeBackground();
 	objectFitImages();
-	initMap();
+
+	if ($(window).width() < 900) {
+		resizeBackground();
+	}
 });
 
 
@@ -13,7 +15,9 @@ $(document).ready(function () {
 
 var screenHeight = $(window).height();
 $(window).resize(function () {
-	resizeBackground();
+	if ($(window).width() < 900) {
+		resizeBackground();
+	}
 	initMap();
 });
 

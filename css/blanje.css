@@ -249,9 +249,8 @@ p {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    width: 24%;
     padding-top: 10px;
     padding-bottom: 10px; }
   #pocetna #info .icons {
@@ -272,11 +271,15 @@ p {
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    margin-left: 20px; }
   #pocetna #info h2 {
     margin: 0; }
   #pocetna #info p {
-    font-family: "PT Sans"; }
+    padding-left: 1px;
+    margin-bottom: 0;
+    font-family: "PT Sans";
+    text-transform: uppercase; }
 #pocetna #welcome {
   display: -webkit-box;
   display: -webkit-flex;
@@ -705,6 +708,51 @@ p {
       .wrapper-bot #container-bot #container-bot-three #map {
         width: 100%;
         height: 100%; }
+    .wrapper-bot #container-bot #container-bot-four {
+      width: 45%; }
+      .wrapper-bot #container-bot #container-bot-four h3 {
+        margin-top: 0px !important;
+        margin-bottom: 10px;
+        font-family: "Roboto Condensed";
+        font-size: 20px;
+        font-weight: 300;
+        color: #FFFFFF;
+        opacity: 0.8;
+        line-height: 1.1; }
+      .wrapper-bot #container-bot #container-bot-four li {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: "PT Sans";
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 20px; }
+        .wrapper-bot #container-bot #container-bot-four li i {
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.2);
+          padding-right: 10px;
+          line-height: 20px; }
+        .wrapper-bot #container-bot #container-bot-four li a {
+          color: #72968f;
+          text-decoration: none; }
+        .wrapper-bot #container-bot #container-bot-four li a:hover {
+          color: #5b7a74; }
+        .wrapper-bot #container-bot #container-bot-four li span {
+          color: #96727A; }
+      .wrapper-bot #container-bot #container-bot-four #hours-info {
+        margin-top: 0;
+        margin-bottom: 10px;
+        list-style: none;
+        padding: 0; }
+      .wrapper-bot #container-bot #container-bot-four #facebook-info {
+        margin-top: 0;
+        margin-bottom: 10px;
+        list-style: none;
+        padding: 0; }
 
 .footer {
   position: relative;
@@ -736,7 +784,8 @@ p {
     max-width: 580px; }
 
   #pocetna #info .wrapper-info {
-    width: 100%; }
+    width: 100%;
+    padding-left: 5%; }
 
   #vijesti .container-news .container-news-image {
     width: 100%; }
@@ -754,6 +803,10 @@ p {
     width: 100%;
     margin-top: 0; }
   .wrapper-bot #container-bot #container-bot-three {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 60px; }
+  .wrapper-bot #container-bot #container-bot-four {
     width: 100%;
     margin-top: 0; } }
 @media (min-width: 600px) and (max-width: 899px) {
