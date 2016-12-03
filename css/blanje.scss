@@ -316,9 +316,8 @@ p {
     
     .wrapper-info {
       @include flexbox;
-      justify-content: space-around;
+      justify-content: flex-start;
       flex-wrap: wrap;
-      width: 24%;
       padding-top: 10px;
       padding-bottom: 10px;
     }
@@ -329,7 +328,7 @@ p {
       justify-content: center;
 
       i {
-        font-size: 5em ;
+        font-size: 5em;
         color: #72968f;
       }
     }
@@ -337,7 +336,8 @@ p {
     .hours {
       @include flexbox;
       flex-direction: column;
-      justify-content: center;    
+      justify-content: center;
+      margin-left: 20px;  
     }
 
     h2 {
@@ -345,7 +345,10 @@ p {
     }
 
     p {
+      padding-left: 1px;
+      margin-bottom: 0;
       font-family: $secondaryFont;
+      text-transform: uppercase;
     }
   }
 
@@ -857,6 +860,67 @@ p {
         height: 100%;
       }
     } 
+
+    #container-bot-four {
+      width: 45%;
+
+      h3 {
+        margin-top: 0px !important;
+        margin-bottom: 10px;
+        font-family: $primaryFont;
+        font-size: 20px;
+        font-weight: 300;
+        color: #FFFFFF;
+        opacity: 0.8;
+        line-height: 1.1;
+      }
+
+      li {
+        @include flexbox;
+        flex-wrap: wrap;
+        font-family: $secondaryFont;
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 20px;
+
+        i {
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.2);
+          padding-right: 10px;
+          line-height: 20px;
+        }
+
+        a {
+          color: #72968f;
+          text-decoration: none;
+        }
+
+        a:hover {
+          color: #5b7a74;
+        }
+
+        span {
+          color: #96727A;
+        }
+      }
+
+      #hours-info {
+        margin-top: 0;
+        margin-bottom: 10px;
+        list-style: none;
+        padding: 0;
+      }
+
+      #facebook-info {
+        margin-top: 0;
+        margin-bottom: 10px;
+        list-style: none;
+        padding: 0;
+      }
+
+
+    }
   }
 }
 
@@ -904,6 +968,7 @@ p {
     #info {
       .wrapper-info {
         width: 100%;
+        padding-left: 5%;
       }
     }
   }
@@ -945,6 +1010,12 @@ p {
       }
 
       #container-bot-three {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 60px;
+      }
+
+      #container-bot-four {
         width: 100%;
         margin-top: 0;
       }
