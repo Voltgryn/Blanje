@@ -337,13 +337,7 @@ $("#next-picture").on("click", function () {
 	imageNext();
 });
 $("#exit-picture").on("click", function () {
-	$(".container-image img").removeClass("image-contain").addClass("image-cover");
-		objectFitImages();
-
-	$("#high-res-pictures img").fadeOut(500, function () {
-		$("#high-res-pictures img").remove();
-	});
-	$("#gallery-cover").fadeOut(500);
+	imageExit();
 });
 $(document).on("keyup", function (e) {
 	if (e.keyCode == 27) {
@@ -373,7 +367,6 @@ function imagePrev() {
 }
 
 function imageNext() {
-
 	$("#next-picture").off();
 	nextPicture = currentPicture + 1;
 
@@ -395,6 +388,9 @@ function imageNext() {
 }
 
 function imageExit() {
+	$(".container-image img").removeClass("image-contain").addClass("image-cover");
+		objectFitImages();
+
 	$("#high-res-pictures img").fadeOut(500, function () {
 		$("#high-res-pictures img").remove();
 	});
