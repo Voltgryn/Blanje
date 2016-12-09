@@ -106,12 +106,11 @@ p {
   background-color: #72968f;
   display: none; 
 
-  h3 {
-    padding: 5px 15px;
-    margin-right: 1%;
-    font-family: $primaryFont;
+  i {
+    padding: 0 15px;
+    margin-right: 5px;
+    font-size: 30px;
     color: #FFFFFF;
-    text-transform: uppercase;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.3);
   }
