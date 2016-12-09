@@ -157,7 +157,7 @@ $(window).on("click", function () {
 
 // Mobile navbar
 
-$("#mobile-navbar h3").on("click", function () {
+$("#mobile-navbar i").on("click", function () {
 	showMobile();
 });
 
@@ -302,7 +302,6 @@ function nextPage() {
 
 $(".container-image img").on("click", function () {
 	getPictureId(this);
-
 });
 
 function getPictureId(picture) {
@@ -396,6 +395,7 @@ function imageExit() {
 	});
 	$("#gallery-cover").fadeOut(500);
 }
+
 
 // Google maps
 

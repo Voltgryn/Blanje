@@ -4,7 +4,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 $formcontent = "Od: $name \n Poruka: $message";
-$recipient = "boris.muminovic@gmail.com";
+$recipient = "nina.kopic2@gmail.com";
 $subject = "Blanje";
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $formcontent, $mailheader) or die("Greška!");
