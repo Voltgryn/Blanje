@@ -453,7 +453,6 @@ p {
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
       width: 100%;
       display: none;
@@ -464,6 +463,7 @@ p {
         min-height: 180px;
         max-height: 180px;
         margin-bottom: 0.5%;
+        margin-right: 0.5%;
         position: relative; }
       #galerija .container-gallery .container-gallery-images img {
         position: absolute;
@@ -477,7 +477,8 @@ p {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      margin-top: 14px; }
+      margin-top: 14px;
+      margin-right: 0.5%; }
       #galerija .container-gallery .container-gallery-navigation h3 {
         margin: 0;
         padding: 8px 16px 8px;
@@ -855,8 +856,8 @@ p {
     max-width: 1080px; }
 
   #galerija .container-gallery .container-gallery-images .container-image {
-    width: 32.5%;
-    height: 32.5%; } }
+    width: 32.8%;
+    height: 32.8%; } }
 @media (min-width: 1200px) and (max-width: 1799px) {
   .wrapper-mid {
     max-width: 1080px; }

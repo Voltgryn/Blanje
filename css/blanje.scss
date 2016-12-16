@@ -544,7 +544,7 @@ p {
 
     .container-gallery-images {
       @include flexbox;
-      justify-content: space-between;
+      //justify-content: space-between;
       flex-wrap: wrap;
       width: 100%;
       display: none;
@@ -557,6 +557,7 @@ p {
         min-height: 180px;
         max-height: 180px;
         margin-bottom: 0.5%;
+        margin-right: 0.5%;
         position: relative;
       }
       img {
@@ -571,6 +572,7 @@ p {
       justify-content: space-between;
       flex-wrap: wrap;
       margin-top: 14px;
+      margin-right: 0.5%;
 
       h3 {
         margin: 0;
@@ -1102,8 +1104,8 @@ p {
     .container-gallery {
       .container-gallery-images {
         .container-image {
-          width: 32.5%;
-          height: 32.5%;
+          width: 32.8%;
+          height: 32.8%;
         }   
       }
     }   
